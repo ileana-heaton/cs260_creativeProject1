@@ -1,3 +1,26 @@
 h1 {
-    color: red;
+    color: black;
+    text-align: center;
+}
+
+body {
+    background-color: #434444;
+}
+
+table {
+  width: 33vw;
+  height: 33vw;
+  color: black;
+  border: 5px solid black;
+  border-collapse: collapse;
+  margin: auto;
+}
+td {
+  position: relative;
+  border: 5px solid black;
+}
+td:after {
+  content: '';
+  display: block;
+  margin-top: 100%;
 }
