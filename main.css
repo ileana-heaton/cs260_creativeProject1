@@ -14,6 +14,7 @@ table {
   border: 5px solid black;
   border-collapse: collapse;
   margin: auto;
+  opacity: 0.5;
 }
 td {
   position: relative;
@@ -25,3 +26,20 @@ td:after {
   margin-top: 100%;
 }
 
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#board {
+    font-size: 8vw;
+}
+#turn-indicator {
+    text-align: center;
+}
+#start-button-div {
+    text-align: center;
+}
