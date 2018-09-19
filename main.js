@@ -74,6 +74,7 @@ function announceResult(winOrDraw, player){
         setTimeout(function() {
             alert(winningStr);  
         },10)
+        turn=0;
     }
     else if("draw") {
         gameOver = 1;
