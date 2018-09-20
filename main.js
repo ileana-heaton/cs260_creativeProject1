@@ -72,7 +72,9 @@ function announceResult(winOrDraw, player){
         var winningStr = "Player "+ player + " won!";
         document.getElementById("turn-indicator").innerHTML = winningStr;
         setTimeout(function() {
-            alert(winningStr);  
+            // alert(winningStr);  
+            document.getElementById("result-popup").innerHTML = winningStr;
+            document.getElementById("result-popup").style.visibility = "visible";
         },10)
         turn=0;
     }
@@ -80,7 +82,9 @@ function announceResult(winOrDraw, player){
         gameOver = 1;
         document.getElementById("turn-indicator").innerHTML = "It's a draw!";
         setTimeout(function() {
-            alert("It's a draw!");  
+            // alert("It's a draw!"); 
+            document.getElementById("result-popup").innerHTML = "It's a draw!";
+            document.getElementById("result-popup").style.visibility = "visible";
         },10)
     }
 }

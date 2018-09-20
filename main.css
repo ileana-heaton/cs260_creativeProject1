@@ -1,29 +1,32 @@
 h1 {
     color: black;
     text-align: center;
+    margin-top: 0;
 }
 
 body {
+    margin-top: 0%;
     background-color: #434444;
+    position:relative;
 }
 
 table {
-  width: 33vw;
-  height: 33vw;
-  color: black;
-  border: 5px solid black;
-  border-collapse: collapse;
-  margin: auto;
-  opacity: 0.5;
+    width: 33vw;
+    height: 33vw;
+    color: black;
+    border: 5px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    opacity: 0.5;
 }
 td {
-  position: relative;
-  border: 5px solid black;
+    position: relative;
+    border: 5px solid black;
 }
 td:after {
-  content: '';
-  display: block;
-  margin-top: 100%;
+    content: '';
+    display: block;
+    margin-top: 100%;
 }
 
 /* Centered text */
@@ -39,7 +42,26 @@ td:after {
 }
 #turn-indicator {
     text-align: center;
+    font-size: 1.5em;
 }
 #start-button-div {
     text-align: center;
 }
+
+#result-popup {
+    visibility: hidden;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+    font-size: 2em;
+    border-radius: 25px;
+    padding: 20px;
+    background: rgba(270, 270, 270, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
