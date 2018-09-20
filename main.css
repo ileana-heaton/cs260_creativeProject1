@@ -6,8 +6,9 @@ h1 {
 
 body {
     margin-top: 0%;
-    background-color: #434444;
+    background-color: #727171;
     position:relative;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 table {
@@ -18,10 +19,14 @@ table {
     border-collapse: collapse;
     margin: auto;
     opacity: 0.5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    background-color: #BCC4D3;
 }
 td {
     position: relative;
     border: 5px solid black;
+    /*background-color: #BCC4D3;*/
 }
 td:after {
     content: '';
@@ -39,6 +44,7 @@ td:after {
 
 #board {
     font-size: 8vw;
+    
 }
 #turn-indicator {
     text-align: center;
@@ -46,6 +52,9 @@ td:after {
 }
 #start-button-div {
     text-align: center;
+}
+button{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #result-popup {
@@ -64,4 +73,3 @@ td:after {
     background: rgba(270, 270, 270, 0.8);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
