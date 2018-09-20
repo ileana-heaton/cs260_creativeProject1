@@ -71,7 +71,7 @@ function announceResult(winOrDraw, player){
         gameOver = 1;
         var winningStr = "Player "+ player + " won!";
         document.getElementById("turn-indicator").innerHTML = winningStr;
-        document.body.style.backgroundImage = "url('https://www.deskish.com/public/c39640da7abe11e7a006001999c3efd7/ad6042db5fc74687a9d463ea75c0731e_thumb.gif'), url(Gradient-HD-Desktop-Wallpaper.jpg)";
+        document.body.style.backgroundImage = "url(confetti.gif), url(Gradient-HD-Desktop-Wallpaper.jpg)";
         setTimeout(function() {
             // alert(winningStr);  
             document.getElementById("result-popup").innerHTML = winningStr;
@@ -139,4 +139,8 @@ function isWinningMove(squareNum, arr){
             break;
     }
     return false;
+}
+
+function hidePopup(){
+    document.getElementById("result-popup").style.visibility = "hidden";
 }
