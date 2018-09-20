@@ -27,7 +27,7 @@ function fill(square) {
 
 function startGame() {
     document.getElementById("board").style.opacity = 1;
-    document.getElementById("turn-indicator").innerHTML = "Turn: Player 1";
+    document.getElementById("turn-indicator").innerHTML = "Turn: Player X";
     gameStarted = 1;
     gameOver = 0;
 }
