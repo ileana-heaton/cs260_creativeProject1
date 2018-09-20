@@ -9,6 +9,10 @@ body {
     background-color: #727171;
     position:relative;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url(Gradient-HD-Desktop-Wallpaper.jpg);
+    /*background-image: url('https://www.deskish.com/public/c39640da7abe11e7a006001999c3efd7/ad6042db5fc74687a9d463ea75c0731e_thumb.gif', 'https://www.pixelstalk.net/wp-content/uploads/2016/05/Gradient-HD-Desktop-Wallpaper.jpg')";*/
+    background-size: cover;
+    
 }
 
 table {
@@ -21,7 +25,7 @@ table {
     opacity: 0.5;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
-    background-color: #BCC4D3;
+    /*background-color: white; */
 }
 td {
     position: relative;
