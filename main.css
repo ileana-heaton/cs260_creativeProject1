@@ -43,3 +43,19 @@ td:after {
 #start-button-div {
     text-align: center;
 }
+.flex-container {
+    display: flex;
+}
+.player-specs-box {
+    width: 33vw;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* Style all font awesome icons */
+.fa {
+    text-decoration: none;
+    color: black;
+    /*margin: auto;*/
+    /*margin-top: 4px;*/
+}
