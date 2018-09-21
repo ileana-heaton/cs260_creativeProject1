@@ -3,11 +3,13 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <title>Tic-Tac-Toe</title>
+        <link rel="icon" href="TTT.png">
         <link rel="stylesheet" href="main.css">
         <script src="main.js"></script>
-        
+      
     </head>
-    <body>
+    <body onclick="hidePopup()">
         <h1>Tic-Tac-Toe</h1>
         <div class="flex-container">
             <div id="player-one-specs" class="player-specs-box">
@@ -88,5 +90,12 @@
         <div id="start-button-div">
             <button id="start-button" type="button" onclick="startGame()">Start Game</button>
         </div>
+        
+        <div id="result-popup">
+            <div is="winnerStr">
+                <p>HEY THERE</p>
+            </div>
+        </div>
+        
     </body>
 </html>
