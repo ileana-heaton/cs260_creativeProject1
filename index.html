@@ -13,78 +13,114 @@
         <h1>Tic-Tac-Toe</h1>
         <div class="flex-container">
             <div id="player-one-specs" class="player-specs-box">
-                <h3>Player 1</h3>
+                <h2>Player 1</h2>
                 <div class="custom-select color-select">
-                    <select>
+                    <select onchange="changeP1Color(value)">
                         <option value="0">Select color:</option>
-                        <option value="1">Red</option>
-                        <option value="2">Orange</option>
-                        <option value="3">Yellow</option>
-                        <option value="4">Green</option>
-                        <option value="5">Blue</option>
-                        <option value="6">Purple</option>
-                        <option value="7">Black</option>
-                        <option value="8">White</option>
-                        <option value="9">Brown</option>
+                        <option value="red">Red</option>
+                        <option value="orange">Orange</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="purple">Purple</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="brown">Brown</option>
                     </select>
                 </div>
                 <div class="custom-select symbol-select">
-                    <select>
+                    <select onchange="changeP1Symbol(value)">
                         <option value="0">Select symbol:</option>
-                        <option value="1">Red</option>
-                        <option value="2">Orange</option>
-                        <option value="3"><span class="fas fa-stroopwafel"></span></option>
-                        <option value="4">Green</option>
-                        <option value="5">Blue</option>
-                        <option value="6">Purple</option>
-                        <option value="7">Black</option>
-                        <option value="8">White</option>
-                        <option value="9">Brown</option>
+                        <option value="fas fa-times">X</option>
+                        <option value="fas fa-circle">O</option>
+                        <option value="fas fa-stroopwafel">Stroopwafel</option>
+                        <option value="fas fa-frog">Frog</option>
+                        <option value="fas fa-smile">Smiley</option>
+                        <option value="fas fa-truck-monster">Monster Truck</option>
+                        <option value="fab fa-bitcoin">Bitcoin</option>
+                        <option value="fab fa-ethereum">Ethereum</option>
+                        <option value="fas fa-bomb">Bomb</option>
+                        <option value="fas fa-lemon">Lemon</option>
+                        <option value="fas fa-lightbulb">Lightbulb</option>
+                        <option value="fas fa-rocket">Rocket</option>
                     </select>
                 </div>
+                <div class="symbol"><span id="player-one-symbol" class="fas fa-times"></span></div>
             </div>
             <table id="board">
                 <tr>
                     <td onclick="fill('1')">
-                        <div id="1" class="centered"></div>
+                        <div class="centered"><span id="1"></span></div>
                     </td>
                     <td onclick="fill('2')">
-                        <div id="2" class="centered"></div>
+                        <div class="centered"><span id="2"></span></div>
                     </td>
                     <td onclick="fill('3')">
-                        <div id="3" class="centered"></div>
+                        <div class="centered"><span id="3"></span></div>
                     </td>
                 </tr> 
                 <tr>
                     <td onclick="fill('4')">
-                        <div id="4" class="centered"></div>
+                        <div class="centered"><span id="4"></span></div>
                     </td>
                     <td onclick="fill('5')">
-                        <div id="5" class="centered"></div>
+                        <div class="centered"><span id="5"></span></div>
                     </td>
                     <td onclick="fill('6')">
-                        <div id="6" class="centered"></div>
+                        <div class="centered"><span id="6"></span></div>
                     </td>
                 </tr>
                 <tr>
                     <td onclick="fill('7')">
-                        <div id="7" class="centered"></div>
+                        <div class="centered"><span id="7"></span></div>
                     </td>
                     <td onclick="fill('8')">
-                        <div id="8" class="centered"></div>
+                        <div class="centered"><span id="8"></span></div>
                     </td>
                     <td onclick="fill('9')">
-                        <div id="9" class="centered"></div>
+                        <div class="centered"><span id="9"></span></div>
                     </td>
                 </tr>
             </table>
             <div id="player-two-specs" class="player-specs-box">
-                <h3>Player 2</h3>
+                <h2>Player 2</h2>
+                <div class="custom-select color-select">
+                    <select onchange="changeP2Color(value)">
+                        <option value="0">Select color:</option>
+                        <option value="red">Red</option>
+                        <option value="orange">Orange</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="purple">Purple</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="brown">Brown</option>
+                    </select>
+                </div>
+                <div class="custom-select symbol-select">
+                    <select onchange="changeP2Symbol(value)">
+                        <option value="0">Select symbol:</option>
+                        <option value="fas fa-times">X</option>
+                        <option value="fas fa-circle">O</option>
+                        <option value="fas fa-stroopwafel">Stroopwafel</option>
+                        <option value="fas fa-frog">Frog</option>
+                        <option value="fas fa-smile">Smiley</option>
+                        <option value="fas fa-truck-monster">Monster Truck</option>
+                        <option value="fab fa-bitcoin">Bitcoin</option>
+                        <option value="fab fa-ethereum">Ethereum</option>
+                        <option value="fas fa-bomb">Bomb</option>
+                        <option value="fas fa-lemon">Lemon</option>
+                        <option value="fas fa-lightbulb">Lightbulb</option>
+                        <option value="fas fa-rocket">Rocket</option>
+                    </select>
+                </div>
+                <div class="symbol"><span id="player-two-symbol" class="fas fa-circle"></span></div>
             </div>
         </div>
         <br>
         <div id="turn-indicator" >
-            Click below to start your game! <span class="fas fa-stroopwafel"></span>
+            Click below to start your game!
         </div>
         <br>
         <div id="start-button-div">
@@ -93,7 +129,7 @@
         
         <div id="result-popup">
             <div is="winnerStr">
-                <p>HEY THERE</p>
+                <p>No Winner Yet</p>
             </div>
         </div>
         

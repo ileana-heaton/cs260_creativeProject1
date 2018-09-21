@@ -3,18 +3,26 @@ var gameOver = 0;
 
 /* The following four variables can be used to check if the 
 *  players have selected colors and shapes*/
-var p1ColorSelect = 1;
-var p2ColorSelect = 1;
-var p1ShapeSelect = 1;
-var p2ShapeSelect = 1;
+var p1ColorSelect = 0;
+var p2ColorSelect = 0;
+var p1ShapeSelect = 0;
+var p2ShapeSelect = 0;
+
+/*Variables for player specs*/
+var p1Color = "black";
+var p2Color = "black";
+var p1Symbol = "fas fa-times"
+var p2Symbol = "far fa-circle"
+
 
 var turn = 0;
 
 function fill(square) {
     
-    if(!gameOver && gameStarted && document.getElementById(square).innerHTML == "") {
-        document.getElementById(square).innerHTML = turn % 2 == 0 ? "X" : "O";
-        document.getElementById("turn-indicator").innerHTML = "Turn: Player " + (turn % 2 ? "X" : "O");
+    if(!gameOver && gameStarted && document.getElementById(square).className == "") {
+        document.getElementById(square).className += turn % 2 == 0 ? p1Symbol : p2Symbol;
+        document.getElementById("turn-indicator").innerHTML = "Turn: Player " + (turn % 2 ? "1" : "2");
+        document.getElementById(square).style.color = turn % 2 ==0 ? p1Color : p2Color;
         play(parseInt(square, 10));
         turn++;
     }
@@ -26,10 +34,18 @@ function fill(square) {
 }
 
 function startGame() {
-    document.getElementById("board").style.opacity = 1;
-    document.getElementById("turn-indicator").innerHTML = "Turn: Player X";
-    gameStarted = 1;
-    gameOver = 0;
+    if(p1Color == p2Color && p1Symbol == p2Symbol) {
+        document.getElementById("turn-indicator").innerHTML = "Pick different shapes and colors!";
+        return;
+    }
+    if(p1ColorSelect && p1ShapeSelect && p2ColorSelect && p2ShapeSelect) {
+        document.getElementById("board").style.opacity = 1;
+        document.getElementById("turn-indicator").innerHTML = "Turn: Player 1";
+        gameStarted = 1;
+        gameOver = 0;
+    } else {
+        document.getElementById("turn-indicator").innerHTML = "Select your colors and shapes!";
+    }
 }
 
 function restart() {
@@ -69,7 +85,7 @@ function play(squareNum){
 function announceResult(winOrDraw, player){
     if(winOrDraw=="win"){
         gameOver = 1;
-        var winningStr = "Player "+ player + " won!";
+        var winningStr = "Player "+ (player == "O" ? "2" : "1") + " won!";
         document.getElementById("turn-indicator").innerHTML = winningStr;
         document.body.style.backgroundImage = "url(confetti.gif), url(Gradient-HD-Desktop-Wallpaper.jpg)";
         setTimeout(function() {
@@ -143,4 +159,36 @@ function isWinningMove(squareNum, arr){
 
 function hidePopup(){
     document.getElementById("result-popup").style.visibility = "hidden";
+}
+
+function changeP1Color(color) {
+    if(color) {
+        p1Color = color;
+        document.getElementById("player-one-symbol").style.color = p1Color;
+        p1ColorSelect = 1;
+    }
+}
+
+function changeP1Symbol(symbol) {
+    if(symbol) {
+        p1Symbol = symbol;
+        document.getElementById("player-one-symbol").className = p1Symbol;
+        p1ShapeSelect = 1;
+    }
+}
+
+function changeP2Color(color) {
+    if(color) {
+        p2Color = color;
+        document.getElementById("player-two-symbol").style.color = p2Color;
+        p2ColorSelect = 1;
+    }
+}
+
+function changeP2Symbol(symbol) {
+    if(symbol) {
+        p2Symbol = symbol;
+        document.getElementById("player-two-symbol").className = p2Symbol;
+        p2ShapeSelect = 1;
+    }
 }

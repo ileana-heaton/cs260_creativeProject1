@@ -57,13 +57,13 @@ td:after {
 #start-button-div {
     text-align: center;
 }
-<<<<<<< HEAD
+
 .flex-container {
     display: flex;
+    clear: both;
 }
 .player-specs-box {
     width: 33vw;
-    border: 1px solid black;
     text-align: center;
 }
 
@@ -73,8 +73,9 @@ td:after {
     color: black;
     /*margin: auto;*/
     /*margin-top: 4px;*/
-=======
-button{
+}
+
+button select #player-one-symbol #player-two-symbol{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -100,5 +101,21 @@ button{
   display: table-cell; 
   vertical-align: middle; 
   text-align: center; 
->>>>>>> b01ec305f1304e9814b55b88421c7ae0a1e45abe
+}
+
+.symbol {
+    font-size: 8vw;
+}
+
+.player-one-symbol {
+    color: black;
+}
+
+.custom-select {
+    padding-bottom: 8px;
+}
+
+.disabled-select {
+    pointer-events: none;
+    color: red;
 }
